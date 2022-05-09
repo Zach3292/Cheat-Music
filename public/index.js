@@ -10,6 +10,14 @@ var cmdOption = " -o " + outputOMRFolderPath;
 //makeXML(inputImgFilePath);
 //convertXML2MIDI("C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\romantic.musicxml", "C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\output.mid");
 
+
+// il faut que le programme exécute makeXML() qui prend beaucoup de temps à fonctionner, attendre que runCLICommand() soit fini
+// et ensuite faire la meme chose avec convertXML2MIDI alors attendre que la fonction soit fini et que runCLICOmmand soit fini
+
+
+
+
+
 //getNotesData();
 
 function getNotesData(){
