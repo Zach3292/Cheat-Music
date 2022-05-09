@@ -1,0 +1,19 @@
+{
+  "name": "cheat-music-code",
+  "version": "1.0.0",
+  "description": "automated omr cli app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "child_process": "^1.0.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "numpy": "^0.0.1",
+    "xml-js": "^1.6.11",
+    "xml2js": "^0.4.23"
+  }
+}

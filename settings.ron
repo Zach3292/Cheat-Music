@@ -1,0 +1,15 @@
+(
+    speed_multiplier: 1,
+    playback_offset: 0,
+    color_schema: [
+        (
+            base: (93, 188, 255),
+            dark: (48, 124, 255),
+        ),
+        (
+            base: (210, 89, 222),
+            dark: (125, 69, 134),
+        ),
+    ],
+    background_color: (0, 0, 0),
+)
