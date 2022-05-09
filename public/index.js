@@ -76,7 +76,8 @@ function makeXML(inputImgPath) {
             console.log(`stderr: ${stderr}`);
             return;
         }
-        console.log(`stdout: ${stdout}`);
+        console.log(`stdout: ${stdout}`); //printed
+        console.log("done making XML file"); //never printed
         convertXML2MIDI("C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\romantic.musicxml", "C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\output.mid");
     });
     
