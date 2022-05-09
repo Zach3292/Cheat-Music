@@ -7,7 +7,7 @@ var outputOMRFolderPath = `C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\C
 var cmdOption = " -o " + outputOMRFolderPath;
 
 
-//makeXML(inputImgFilePath);
+makeXML(inputImgFilePath);
 //convertXML2MIDI("C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\romantic.musicxml", "C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\output.mid");
 
 
@@ -67,16 +67,42 @@ function getNotesData(){
 }
 
 function makeXML(inputImgPath) {
-
+    console.log("make XML");
     let command =  "oemer" + cmdOption +  " " + inputImgPath;
-    runCLICommand(command);
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        convertXML2MIDI("C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\romantic.musicxml", "C:\\Users\\Zach\\Documents\\École\\Entreprenariat\\Cheat-Music-Code\\output.mid");
+    });
     
 }
 
-function convertXML2MIDI(pathsToXml, pathsToMidi){
+function testFinished(){
+    console.log("finished");
+}
 
-    let commandXML2MIDI = `"C:\\Program Files\\MuseScore 3\\bin\\MuseScore3.exe" ` + pathsToXml + " -o " + pathsToMidi;
-    runCLICommand(commandXML2MIDI);
+function convertXML2MIDI(pathsToXml, pathsToMidi){
+    console.log("XML 2 MIDI");
+    let command = `"C:\\Program Files\\MuseScore 3\\bin\\MuseScore3.exe" ` + pathsToXml + " -o " + pathsToMidi;
+    exec(command, (error, stdout, stderr) => {
+        if (error) {
+            console.log(`error: ${error.message}`);
+            return;
+        }
+        if (stderr) {
+            console.log(`stderr: ${stderr}`);
+            return;
+        }
+        console.log(`stdout: ${stdout}`);
+        testFinished();
+    });
 }
 
 function runCLICommand(command){
