@@ -9,11 +9,6 @@ var cmdOption = " -o " + outputOMRFolderPath;
 
 makeXML(inputImgFilePath);
 
-// il faut que le programme exécute makeXML() qui prend beaucoup de temps à fonctionner, attendre que runCLICommand() soit fini
-// et ensuite faire la meme chose avec convertXML2MIDI alors attendre que la fonction soit fini et que runCLICOmmand soit fini
-
-
-
 
 
 //getNotesData();
@@ -70,11 +65,11 @@ function makeXML(inputImgPath) {
     exec(command, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return;
+            //return;
         }
         if (stderr) {
             console.log(`stderr: ${stderr}`);
-            return;
+            //return;
         }
         console.log(`stdout: ${stdout}`); //printed
         console.log("done making XML file"); //never printed
@@ -93,11 +88,11 @@ function convertXML2MIDI(pathsToXml, pathsToMidi){
     exec(command, (error, stdout, stderr) => {
         if (error) {
             console.log(`error: ${error.message}`);
-            return;
+            //return;
         }
         if (stderr) {
             console.log(`stderr: ${stderr}`);
-            return;
+            //return;
         }
         console.log(`stdout: ${stdout}`);
         testFinished();
